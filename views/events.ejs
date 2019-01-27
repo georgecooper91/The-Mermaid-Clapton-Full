@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+        <main>
+            <section class="section-a">
+                <div class="image-container">
+                    <img class="image" src="https://farm5.staticflickr.com/4843/45497958575_c41c7fc526.jpg" alt="">
+                </div>
+                <h1 class="title">Events</h1>
+                <div class="about">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt amet quasi alias eaque dolorum natus possimus nam reiciendis recusandae maiores officia accusantium vero soluta cum et tempora ut praesentium, maxime harum aspernatur! Cupiditate nemo rerum voluptas distinctio vitae voluptatum quidem.
+                    </p>
+                </div>
+            </section>
+            <section class="section-b">
+                <div class="eventsDesktop">
+                    <% events.reverse().forEach(function(event){ %>
+                            <div class="events">
+                                <h2><%= event.name %> </h2>
+                                <p><%= event.date %></p>
+                                <img src="<%= event.image %>">
+                                <p><%= event.description %></p>
+                                <br>
+                            </div>
+                    <%  }); %>
+                </div>
+            </section>
+        </main>
+   
+        <footer>
+                <p><a href="/login"><i class="fas fa-copyright"></i></a> The Mermaid, 181 Clarence Road, E5 8EE</p>
+        </footer>
+    
+        <script src="../public/scripts/mermaidScripts.js" async defer></script>
+    </body>
+</html>

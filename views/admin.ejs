@@ -1,0 +1,38 @@
+<% include partials/header %>
+
+        <main>
+            <section class="section-a">
+                <li class="logout"><a href="/logout">Log Out!</a></li>
+                
+                <h1>Create a new event!</h1>
+                <br>
+                <div class="admin">
+                    <form action="/events" method="POST">
+                        <input type="text" name="name" placeholder="event name" required>
+                        <input type="text" name="date" placeholder="date - dd/mm/yyyy" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                        <input type="text" name="image" placeholder="image" required><br>
+                        <textarea name="description" id="description" cols="30" rows="10" placeholder="description..." required></textarea><br>
+                        <button class="butIndex">Submit!</button>
+                    </form>
+                </div>
+                <br>
+            </section>
+            <section class="section-b">
+                <div class="eventsDesktop">
+                    <% events.reverse().forEach(function(event){ %>
+                            <div class="events">
+                                <h2><%= event.name %> </h2>
+                                <p><%= event.date %></p>
+                                <img src="<%= event.image %>">
+                                <p><%= event.description %></p>
+                                <p class="edit">
+                                    <a href="/admin/<%= event._id %>">Edit</a>
+                                </p>
+                                <br>
+                            </div>
+                    <%  }); %>
+                </div>
+            </section>
+        </main>
+
+<% include partials/footer %>

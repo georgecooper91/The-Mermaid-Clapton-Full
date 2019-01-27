@@ -1,0 +1,318 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+    overflow-wrap: break-word; 
+}
+
+/*nav-bar*/
+#nav-container{
+    width: 100%;
+    height: 55px;
+    background-color: #011D43;
+    position: fixed;
+}
+
+#nav-container ul{
+    background-color: #011D43;
+    opacity: 0.9;
+    margin-top: 54px; 
+}
+
+.navMenu{
+    display: none;   
+}
+
+.scroll{
+    color: whitesmoke;
+    list-style: none;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.hamburger{
+    display: block;
+    position: relative;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.hamburger .fa-bars,
+.hamburger .fa-times{
+    position: fixed;
+    left: 25px;
+    top: 15px;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.phone{
+    display: block;
+    position: fixed;
+    right: 25px;
+    top: 15px;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.phone i{
+    color: whitesmoke;
+}
+
+/*background-image*/
+#logo-container{
+    background-size: cover;
+    height: 100vh;
+    background-image: url("../public/images/mermaid.PNG");
+    background-position: center;
+}
+
+/*sections*/
+.section-a{
+    width: 100%;
+    background-color: #011D43;
+    color: whitesmoke;
+    padding-top: 3.5em;
+}
+
+.section-b{
+    padding: 2em;
+    background-color: whitesmoke;
+}
+
+.section-c{
+    width: 100%;
+    background-color: #011D43;
+    color: whitesmoke;
+    padding: 2em;
+}
+
+.section-d{
+    padding-top: 2em;
+    background-color: whitesmoke;
+    padding-bottom: 2em;
+}
+
+/*Images*/
+.image-container{
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.image{
+    padding: 1em;
+    max-width: 100%;
+}
+
+.imageDraught{
+    max-width: 80%;
+}
+
+/*Text*/
+.title{
+    padding-top: 1em;
+    font-size: 2.2em;
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+
+#mailListTitle{
+    font-size: 1.4em;
+}
+
+.about{
+    padding: 2em;
+    font-size: 1.1em;
+    text-align: justify;
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+
+/*forms*/
+form input{
+    width: 100%;
+    border: 3px solid rgb(0, 0, 0);
+    height: 40px;
+    border-radius: 10px;
+    font-family: inherit;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea{
+    width: 100%;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: inherit;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+button{
+    width: 20%;
+    height: 35px;
+    background-color: #011D43;
+    color: whitesmoke;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.butIndex{
+    background-color: whitesmoke;
+    color: black;
+}
+
+/* opening times list */
+.un-list li{
+    list-style: none;
+    padding: 10px;
+    font-size: larger;
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+
+/*draught list*/
+#draught{
+    background-color: #011D43;
+    color: whitesmoke;
+    width: 100%;
+    text-align: left;
+}
+
+#draught1{
+    padding: 3%;
+    font-size: 3em;
+}
+
+th{
+    padding: 3%;
+    font-size: x-large;
+}
+
+/*Menus*/
+.menu{
+    display: grid;
+}
+
+.menu th{
+    font-size: larger;
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+
+.menu tr {
+    font-size: larger;
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+
+/*Events*/
+.events{
+    text-shadow: 3px 4px 17px rgba(0,0,0,0.3);
+}
+.events img{
+    max-width: 100%;
+}
+
+.fa-copyright{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*Map*/
+/* .containMap{
+    width: 80%;
+    margin: auto;
+} */
+
+#map-container{
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+}
+
+#map-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+}
+
+/*contact*/
+
+
+/*Log In*/
+.login{
+    width: 100%;
+    padding-top: 20vh;
+    padding-bottom: 40vh;
+}
+
+.login div{
+    width: 80%;
+    margin: auto;
+}
+
+/*Admin*/
+.admin{
+    width: 80%;
+    margin: auto;
+}
+
+.edit a{
+    text-decoration: none;
+}
+
+.logout{
+    list-style: none;
+    text-align: right;
+    padding-right: 10%;
+    padding-bottom: 17px;
+}
+
+.logout a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/*Show*/
+.show{
+    padding-top: 15vh;
+    width: 100%;
+    padding-bottom: 10vh;
+}
+
+.show img{
+    max-width: 80%;
+}
+
+.showButtons{
+    padding: 10px;
+}
+
+.update{
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 25vh;
+}
+
+/*Footer*/
+footer{
+    width: 100%;
+    background-color: #011D43;
+    color: whitesmoke;
+    padding: 1em;
+}
+
+@media only screen and (min-width: 450px) {
+    .draught-left,
+    .draught-right{
+        display: grid;
+    }
+}

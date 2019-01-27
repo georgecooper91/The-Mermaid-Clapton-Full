@@ -1,0 +1,58 @@
+/*Images*/
+.image{
+    height: 60vh;
+}
+
+/*Sign up form*/
+.sign-up{
+    width: 60%;
+    margin: auto;
+}
+
+/*Events pages*/
+.eventsDesktop{
+    padding-bottom: 5em;
+    padding-top: 5em;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+.events{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+
+.events img{
+    max-width: 80%;
+}
+
+/*Draught list*/
+.imageDraught{
+    height: 250px;
+    max-width: 100%;
+}
+
+#draught{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Contact page form*/
+#contact-form{
+    width: 50%;
+    margin: auto;
+    padding-top: 2em;
+}
+
+/*Map Container*/
+.containMap{
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 450px) {
+    align-content: center;
+}

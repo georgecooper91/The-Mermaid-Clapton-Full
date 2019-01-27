@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+        <main>
+            <section class="show">
+                <div>
+                    <h3><%= event.name %></h3>
+                    <p><%= event.date %></p>
+                    <img src="<%= event.image %>" alt="">
+                    <p><%= event.description %></p>
+                    <div class="showButtons1">
+                        <div class="showButtons">
+                            <a href="/admin/<%= event._id %>/edit">Edit!</a>
+                        </div>
+                        <form action="/admin/<%= event._id %>?_method=DELETE" method="POST">
+                            <button>Delete</button>
+                        </form>
+                        <div class="showButtons">
+                            <a href="/admin">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+<% include partials/footer %>
