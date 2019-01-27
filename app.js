@@ -63,7 +63,7 @@ function addEmailToMailChimp(email){
     var options = { method: 'POST',
     url: 'https://us20.api.mailchimp.com/3.0/lists/50d6ed4cad/members',
     headers: 
-    { 'Postman-Token': 'e1e2945d-c102-3f83-d07d-4124f51cbdb3',
+    { 'Postman-Token': '',
         'Cache-Control': 'no-cache',
         Authorization: 'Basic YW55c3RyaW5nOjIwNjQ5MDk3YjQzNjk5MTcxYmMyYzA3OTIzYjhlNGFkLXVzMjA=',
         'Content-Type': 'application/json' },
