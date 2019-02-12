@@ -5,7 +5,8 @@
                     <h1>Edit <%= event.name %></h1>
                     <form action="/admin/<%= event._id %>?_method=PUT" method="POST">
                         <input type="text" name="name" value="<%= event.name %>" required>
-                        <input type="text" name="date" value="<%= event.date %>" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                        <input type="text" name="date" value="<%= event.date %>" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                        <input type="text" name="dateWords" value="<%= event.dateWords %>">
                         <input type="text" name="image" value="<%= event.image %>" required><br>
                         <textarea name="description" id="description" cols="30" rows="10" required><%= event.description %></textarea><br>
                         <button>Update!</button>

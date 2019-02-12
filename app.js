@@ -63,7 +63,7 @@ function addEmailToMailChimp(email){
     var options = { method: 'POST',
     url: 'https://us20.api.mailchimp.com/3.0/lists/50d6ed4cad/members',
     headers: 
-    { 'Postman-Token': '',
+    { 'Postman-Token': 'e1e2945d-c102-3f83-d07d-4124f51cbdb3',
         'Cache-Control': 'no-cache',
         Authorization: 'Basic YW55c3RyaW5nOjIwNjQ5MDk3YjQzNjk5MTcxYmMyYzA3OTIzYjhlNGFkLXVzMjA=',
         'Content-Type': 'application/json' },
@@ -82,7 +82,7 @@ app.get('/location', function(req, res){
     res.render('location');
 });
 
-//draught list page
+//draught list page.
 app.get('/draughtlist', function(req, res){
     res.render('draughtList');
 });
@@ -98,7 +98,7 @@ app.get('/events', (req, res) => {
         if(err){
             console.log(err);
         } else{
-            res.render('events',{events:events});
+            res.render('events', {events:events});
         }
     });
 });
@@ -106,9 +106,10 @@ app.get('/events', (req, res) => {
 app.post('/events', (req, res) => {
     var name = req.body.name;
     var date = req.body.date;
+    var dateWords = req.body.dateWords;
     var image = req.body.image;
     var description = req.body.description;
-    var newEvent = {name: name, date: date, image: image, description: description};
+    var newEvent = {name: name, date: date, dateWords: dateWords, image: image, description: description};
     //create a new event and save to dataase
     Event.create(newEvent, function(err, newlycreated){
         if(err){
@@ -143,7 +144,7 @@ app.post('/send', (req, res) => {
         secure: false, // true for 465, false for other ports
         auth: {
         user: "bookings@themermaidclapton.com", // generated ethereal user
-        pass: "" // generated ethereal password
+        pass: "Qatar690!" // generated ethereal password
         },
         tls:{
             rejectUnauthorized:false
@@ -264,6 +265,7 @@ app.delete('/admin/:id', (req, res) => {
     })
 });
 
+//check if a user is logged in
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next();

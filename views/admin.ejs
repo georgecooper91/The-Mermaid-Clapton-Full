@@ -9,7 +9,8 @@
                 <div class="admin">
                     <form action="/events" method="POST">
                         <input type="text" name="name" placeholder="event name" required>
-                        <input type="text" name="date" placeholder="date - dd/mm/yyyy" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                        <input type="text" name="date" placeholder="date - dd/mm/yyyy" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                        <input type="text" name="dateWords" placeholder="date in words e.g. every Saturday">
                         <input type="text" name="image" placeholder="image" required><br>
                         <textarea name="description" id="description" cols="30" rows="10" placeholder="description..." required></textarea><br>
                         <button class="butIndex">Submit!</button>
@@ -23,6 +24,7 @@
                             <div class="events">
                                 <h2><%= event.name %> </h2>
                                 <p><%= event.date %></p>
+                                <p><%= event.dateWords %></p>
                                 <img src="<%= event.image %>">
                                 <p><%= event.description %></p>
                                 <p class="edit">

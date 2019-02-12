@@ -24,6 +24,10 @@ body{
     margin-top: 54px; 
 }
 
+#nav-container ul li{
+    height: 30px;
+}
+
 .navMenu{
     display: none;   
 }
@@ -43,6 +47,7 @@ body{
 
 .hide{
     opacity: 0;
+    /*display: none;*/
 }
 
 .hamburger .fa-bars,
