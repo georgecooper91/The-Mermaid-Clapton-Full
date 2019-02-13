@@ -25,6 +25,9 @@
             </section>
             <section class="section-c">
                 <h3 id="mailListTitle">Join our mailing list</h3><br>
+                <% if(typeof msg1 !== 'undefined') { %>
+                    <p><%= msg1 %></p>
+                <% } %>
                 <div class="sign-up">
                     <form action="/" method="POST">
                         <input type="email" name="chimpMail" id="email" placeholder="E-mail" required><br>

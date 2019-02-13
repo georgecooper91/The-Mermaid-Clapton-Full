@@ -1,3 +1,21 @@
+/*Nav-bar*/
+.hamburger {
+    display: none;
+}
+
+#nav-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0px;
+    width: 90%; 
+    height: 55px;
+}
+
+.scroll{
+    font-size: 15px;
+}
+
 /*Images*/
 .image{
     height: 60vh;
@@ -40,6 +58,18 @@
     justify-content: space-around;
 }
 
+/*Menu*/
+.menu{
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(1, 1fr 3fr 1fr);
+}
+
+.menu table {
+    grid-column-start: 2;
+    text-align: start;
+}
+
 /*Contact page form*/
 #contact-form{
     width: 50%;
@@ -54,5 +84,7 @@
 }
 
 @media only screen and (max-width: 450px) {
-    align-content: center;
+    body {
+        align-content: center;
+    }
 }

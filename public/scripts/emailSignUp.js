@@ -6,9 +6,9 @@ var dob = document.getElementById("signUpDate");
 function getAge(event) {
     event.preventDefault();
 
-    //check age form has been filled in
-    if(dob.value === ""){
-        alert("Please enter your date of birth");
+    //check email and age forms have been filled in
+    if(email.value === "" | dob.value === ""){
+        alert("Please enter your e-mail and date of birth.");
         return;
     }
 
@@ -21,7 +21,6 @@ function getAge(event) {
         age--;
     }
     if(age > 18){
-        console.log("Success");
         chimpMailer();
     } else {
         alert("Too young, recipients must be over 18");
@@ -29,9 +28,7 @@ function getAge(event) {
 }
 
 //send email to app.js via AJAX
-function chimpMailer(event){
-    //event.preventDefault();
-    //getAge(dateString);
+function chimpMailer(){
 
     const xhl = new XMLHttpRequest();
     xhl.open("POST", "/", true);
