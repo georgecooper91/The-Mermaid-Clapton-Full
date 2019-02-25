@@ -12,7 +12,7 @@ Body-parser.js
 Database;
 MondoDb
 
-Client site;
+Client side;
 Vanilla JavaScript,
 HTML 5,
 CSS 3
