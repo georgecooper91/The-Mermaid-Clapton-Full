@@ -38,7 +38,8 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/mermaid', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost/mermaid', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://georginho:georginho@cluster0-gadeg.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function(){
