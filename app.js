@@ -58,6 +58,8 @@ app.use(contactRoutes);
 app.use(loginRoutes);
 app.use('/admin/:id', editEventRoutes);
 
-app.listen('3000', () => {
-    console.log("App has started");
-});
+// app.listen('3000', () => {
+//     console.log("App has started");
+// });
+
+app.listen(process.env.PORT || 5000);
