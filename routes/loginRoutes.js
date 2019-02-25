@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
+const User = require('../models/User');
 
 //login page
 router.get('/login', (req, res) => {
@@ -9,7 +10,7 @@ router.get('/login', (req, res) => {
 });
 
 //handling user sign up
-// app.post('/login', function(req, res) {
+// router.post('/login', function(req, res) {
 //     req.body.username
 //     req.body.password
 //     User.register(new User({username: req.body.username}), req.body.password, function(err, user){
