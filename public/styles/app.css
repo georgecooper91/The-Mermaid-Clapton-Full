@@ -22,7 +22,7 @@ body{
 #nav-container ul{
     background-color: #011D43;
     opacity: 0.9;
-    margin-top: 54px; 
+    /* margin-top: 54px;  */
 }
 
 #nav-container ul li{
@@ -30,7 +30,11 @@ body{
 }
 
 .navMenu{
-    display: none;   
+    display: none;
+}
+
+.navActive {
+    display: block;
 }
 
 .scroll{
@@ -41,23 +45,31 @@ body{
     font-size: 20px;
 }
 
-.hamburger{
-    display: block;
-    position: relative;
+.burger {
+    padding-left: 25px;
+    padding-top: 15px;
+    cursor: pointer;
 }
 
-.hide{
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/*Change burger to X*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
     opacity: 0;
-    /*display: none;*/
 }
 
-.hamburger .fa-bars,
-.hamburger .fa-times{
-    position: fixed;
-    left: 25px;
-    top: 15px;
-    font-size: 30px;
-    color: whitesmoke;
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .phone{

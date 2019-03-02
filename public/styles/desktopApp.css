@@ -3,6 +3,9 @@
     display: none;
 }
 
+.burger {
+    display: none;
+}
 #nav-container ul {
     display: flex;
     flex-direction: row;
